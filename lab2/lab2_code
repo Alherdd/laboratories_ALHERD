@@ -25,4 +25,4 @@ nucleotide = {
 
 pr = input('Введите свою последовательнось:').strip()
 mass_of_pr = sum(nucleotide[el] for el in pr)
-print(f'{mass_of_pr:.10f}')
+print('Ваша последовательность имеет вот такой вес:', f'{mass_of_pr:}')
