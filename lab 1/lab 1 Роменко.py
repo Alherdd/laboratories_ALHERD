@@ -8,13 +8,14 @@ def reccurent_rel(n, k):
     F[2] = 1
     if n > 1:
         for i in range(3, n + 1):
-         F[i] = (F[i - 1] + (k * F[i - 2]))
+            F[i] = F[i - 1] + (k * F[i - 2])
 
     return F[n]
 
-n = 9
-k = 3
+
+n = int(input("Введите количество месяцев: "))
+k = int(input("Введите начальное количество пар кроликов: "))
+
 
 result = reccurent_rel(n, k)
 print(f"Общее число кроличьих пар на {n} месяц: {result}")
-
