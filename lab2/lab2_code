@@ -24,5 +24,5 @@ nucleotide = {
 }
 
 pr = input('Введите свою последовательнось:').strip()
-mass_of_pr = sum(nucleotide[aa] for aa in pr)
-print(f"{mass_of_pr:.3f}")
+mass_of_pr = sum(nucleotide[el] for el in pr)
+print(f'{mass_of_pr:.10f}')
