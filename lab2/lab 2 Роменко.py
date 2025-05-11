@@ -21,6 +21,12 @@ nucleotide = {
     'Y': 163.063329
 }
 
-pr = input('Введите свою последовательность:').strip()
-mass_of_pr = sum(nucleotide[el] for el in pr)
+pr = input('Введите свою последовательность:').strip().upper()
+try:
+    mass_of_pr = sum(nucleotide[el] for el in pr)
+except KeyError as e:
+    print(f"Ошибка: аминокислота '{e.args[0]}' не распознана.")
+    exit(1)
+
 print('Ваша последовательность имеет вот такой вес:', f'{mass_of_pr:}')
+
