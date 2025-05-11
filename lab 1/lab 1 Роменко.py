@@ -19,6 +19,7 @@ def reccurent_rel(n, k):
 
       return F[n]
 
+
 n = int(input("Введите количество месяцев: "))
 k = int(input("Введите начальное количество пар кроликов: "))
 
