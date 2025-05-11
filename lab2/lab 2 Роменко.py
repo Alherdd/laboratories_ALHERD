@@ -21,6 +21,6 @@ nucleotide = {
     'Y': 163.063329
 }
 
-pr = input('Введите свою последовательнось:').strip()
+pr = input('Введите свою последовательность:').strip()
 mass_of_pr = sum(nucleotide[el] for el in pr)
 print('Ваша последовательность имеет вот такой вес:', f'{mass_of_pr:}')
