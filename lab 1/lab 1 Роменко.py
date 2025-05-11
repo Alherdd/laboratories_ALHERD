@@ -2,16 +2,22 @@
 # VAR1
 
 def reccurent_rel(n, k):
-    F = [0] * (n + 1)
+      if n < 1 or k < 0:
+        raise ValueError("Некорректные входные данные: n ≥ 1, k ≥ 0")
+    
+   
+      if n == 1 or n == 2:
+            return 1
 
-    F[1] = 1
-    F[2] = 1
-    if n > 1:
-        for i in range(3, n + 1):
-            F[i] = F[i - 1] + (k * F[i - 2])
+      F = [0] * (n + 1)
 
-    return F[n]
+      F[1] = 1
+      F[2] = 1
+       
+      for i in range(3, n + 1):
+                F[i] = F[i - 1] + (k * F[i - 2])
 
+      return F[n]
 
 n = int(input("Введите количество месяцев: "))
 k = int(input("Введите начальное количество пар кроликов: "))
