@@ -1,7 +1,10 @@
 import os
 
-os.mkdir('python')
-print("Директория 'python' создана")
+if not os.path.exists('python'):
+    os.mkdir('python')
+    print("Директория 'python' создана")
+else:
+    print("Директория 'python' уже существует")
 
 import seaborn as sns
 import matplotlib.pyplot as plt
